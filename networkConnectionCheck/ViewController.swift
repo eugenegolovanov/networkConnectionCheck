@@ -75,7 +75,7 @@ class ViewController: UIViewController {
                 }
             }
         } else {
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityChanged:", name: ReachabilityChangedNotification, object: reachability)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityChanged(_:)), name: ReachabilityChangedNotification, object: reachability)
         }
     }
     
@@ -106,6 +106,9 @@ class ViewController: UIViewController {
         }
         
         self.networkStatus.text = reachability.currentReachabilityString
+        
+        UIApplication.sharedApplication().delegate!.window!!.hideConnectionBanner()
+
     }
     
     func updateLabelColourWhenNotReachable(reachability: Reachability) {
@@ -114,6 +117,9 @@ class ViewController: UIViewController {
         self.networkStatus.textColor = UIColor.redColor()
         
         self.networkStatus.text = reachability.currentReachabilityString
+        
+        UIApplication.sharedApplication().delegate!.window!!.showConnectionBanner()
+
     }
     
     
@@ -122,8 +128,10 @@ class ViewController: UIViewController {
         
         if reachability.isReachable() {
             updateLabelColourWhenReachable(reachability)
+
         } else {
             updateLabelColourWhenNotReachable(reachability)
+
         }
     }
     
@@ -139,14 +147,14 @@ class ViewController: UIViewController {
     
     @IBAction func showAction(sender: AnyObject) {
         //BannerTEST
-        UIApplication.sharedApplication().delegate!.window!!.showConnectionBanner()
+//        UIApplication.sharedApplication().delegate!.window!!.showConnectionBanner()
 
     }
     
     
     
     @IBAction func hideAction(sender: UIButton) {
-        UIApplication.sharedApplication().delegate!.window!!.hideConnectionBanner()
+//        UIApplication.sharedApplication().delegate!.window!!.hideConnectionBanner()
     }
     
     

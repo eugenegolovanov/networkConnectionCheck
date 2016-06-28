@@ -37,7 +37,7 @@ extension UIWindow {
         
         bannerView.tag = BOTTOM_BANNER_CONNECTION_VIEW_TAG
         bannerView.backgroundColor = UIColor.orangeColor()
-        bannerView.alpha = 0.4
+//        bannerView.alpha = 0.4
         masterView.addSubview(bannerView)
         
         //TextFrame
