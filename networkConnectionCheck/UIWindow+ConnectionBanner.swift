@@ -23,7 +23,14 @@ extension UIWindow {
      */
     func showConnectionBanner() {
         
-        let masterView = self.subviews.first!
+//        let masterView = self.subviews.first!
+        guard let vc = self.rootViewController else {
+            print("Got no root view controller for window")
+            return
+        }
+        
+        
+        let masterView = vc.view
         masterView.layer.removeAllAnimations()
         self.cleanupConnectionBanner(masterView: masterView)
         
@@ -63,7 +70,13 @@ extension UIWindow {
      Hides connection banner if its exists
      */
     func hideConnectionBanner() {
-        let masterView = self.subviews.first!
+//        let masterView = self.subviews.first!
+        guard let vc = self.rootViewController else {
+            print("Got no root view controller for window")
+            return
+        }
+        let masterView = vc.view
+        
         
         guard let bannerView = viewWithTag(BOTTOM_BANNER_CONNECTION_VIEW_TAG) else {
             print("banner does not exists wit tag, Ignoring")

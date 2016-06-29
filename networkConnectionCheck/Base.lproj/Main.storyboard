@@ -21,43 +21,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfi-3n-Oxe">
                                 <rect key="frame" x="20" y="220" width="560" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORF-iJ-Mg5">
                                 <rect key="frame" x="20" y="267" width="560" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QY-Cm-qSA">
-                                <rect key="frame" x="20" y="0.0" width="151" height="91"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.58431372550000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="91" id="U3w-bt-sI9"/>
-                                    <constraint firstAttribute="width" constant="151" id="iwj-Eg-3rL"/>
-                                </constraints>
-                                <state key="normal" title="show">
-                                    <color key="titleColor" red="0.29993428960000001" green="1" blue="0.1399678439" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEr-ua-qcd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSm-ic-uY0">
-                                <rect key="frame" x="429" y="0.0" width="151" height="91"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="91" id="9Ie-s3-wAJ"/>
-                                    <constraint firstAttribute="width" constant="151" id="ShG-UM-Acp"/>
-                                </constraints>
-                                <state key="normal" title="hide">
-                                    <color key="titleColor" red="0.29993428960000001" green="1" blue="0.1399678439" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="hideAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iea-Dw-oRZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -66,11 +38,7 @@
                             <constraint firstItem="cfi-3n-Oxe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="BW8-hZ-4Is"/>
                             <constraint firstItem="ORF-iJ-Mg5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LTP-id-Kh6"/>
                             <constraint firstItem="ORF-iJ-Mg5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mc9-nQ-gW6"/>
-                            <constraint firstItem="7QY-Cm-qSA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="aUd-dA-dU6"/>
-                            <constraint firstItem="7QY-Cm-qSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cCV-yU-YoS"/>
-                            <constraint firstItem="NSm-ic-uY0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="f5L-jE-Ang"/>
                             <constraint firstItem="ORF-iJ-Mg5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lC0-NK-cau"/>
-                            <constraint firstItem="NSm-ic-uY0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qKv-Z1-3kq"/>
                             <constraint firstItem="cfi-3n-Oxe" firstAttribute="trailing" secondItem="ORF-iJ-Mg5" secondAttribute="trailing" id="ttW-hu-0E6"/>
                             <constraint firstItem="ORF-iJ-Mg5" firstAttribute="top" secondItem="cfi-3n-Oxe" secondAttribute="bottom" constant="8" symbolic="YES" id="uBG-8i-Rgu"/>
                         </constraints>

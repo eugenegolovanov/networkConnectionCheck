@@ -67,11 +67,19 @@ class ViewController: UIViewController {
             reachability?.whenReachable = { reachability in
                 dispatch_async(dispatch_get_main_queue()) {
                     self.updateLabelColourWhenReachable(reachability)
+                    
+                    //BANNER
+                    UIApplication.sharedApplication().delegate!.window!!.hideConnectionBanner()
+
                 }
             }
             reachability?.whenUnreachable = { reachability in
                 dispatch_async(dispatch_get_main_queue()) {
                     self.updateLabelColourWhenNotReachable(reachability)
+                    
+                    //BANNER
+                    UIApplication.sharedApplication().delegate!.window!!.showConnectionBanner()
+
                 }
             }
         } else {
@@ -107,7 +115,6 @@ class ViewController: UIViewController {
         
         self.networkStatus.text = reachability.currentReachabilityString
         
-        UIApplication.sharedApplication().delegate!.window!!.hideConnectionBanner()
 
     }
     
@@ -118,7 +125,6 @@ class ViewController: UIViewController {
         
         self.networkStatus.text = reachability.currentReachabilityString
         
-        UIApplication.sharedApplication().delegate!.window!!.showConnectionBanner()
 
     }
     
@@ -144,18 +150,6 @@ class ViewController: UIViewController {
     
     
     
-    
-    @IBAction func showAction(sender: AnyObject) {
-        //BannerTEST
-//        UIApplication.sharedApplication().delegate!.window!!.showConnectionBanner()
-
-    }
-    
-    
-    
-    @IBAction func hideAction(sender: UIButton) {
-//        UIApplication.sharedApplication().delegate!.window!!.hideConnectionBanner()
-    }
     
     
     
